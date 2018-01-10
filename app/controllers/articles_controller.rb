@@ -4,7 +4,7 @@ class ArticlesController < ApplicationController
   before_action :require_login, except: [:index, :show]
 
   def index
-    @articles = Article.all
+    @articles = Article.all.reverse
   end
 
   def new
@@ -22,6 +22,7 @@ class ArticlesController < ApplicationController
 
   def show
     @article = Article.find(params[:id])
+    @article.increment_view_count
     @comment = Comment.new
     @comment.article_id = @article.id
   end

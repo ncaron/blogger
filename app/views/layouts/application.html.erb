@@ -10,6 +10,12 @@
 
   <body>
     <p class="flash"><%= flash.notice %></p>
+    <nav>
+      <ul>
+        <li><%= link_to "Articles", articles_path %></li>
+        <li><%= link_to "Tags", tags_path %></li>
+      </ul>
+    </nav>
     <div id="container">
       <div id="content">
         <%= yield %>

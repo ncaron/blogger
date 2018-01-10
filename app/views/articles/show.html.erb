@@ -1,4 +1,4 @@
-<h1><%= @article.title %></h1>
+<h1><%= "#{@article.title} (Views: #{@article.view_count})" %></h1>
 <p>
   Tags:
   <% @article.tags.each do |tag| %>
