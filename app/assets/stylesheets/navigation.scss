@@ -1,0 +1,23 @@
+.navigation {
+  display: inline-block;
+  border: 1px solid black;
+  border-radius: 1.2em;
+  background-image: linear-gradient(white, #ccc);
+  text-shadow: #fff 0 1px;
+
+  li {
+    display: inline-block;
+  }
+
+  li + li {
+    border-left: 1px solid black;
+  }
+
+  a {
+    display: inline-block;
+    color: black;
+    text-align: center;
+    text-decoration: none;
+    padding: 10px 15px;
+  }
+}
